@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<!-- single post section -->
+
+          <div class="course-note">Featured Posts</div>
+          <h3>{{post.title|capfirst}}</h3>
+              <div class="course-author">
+                <h6>Author</h6>
+<!--                <p>{{course.creator|capfirst}}, <span>Developer</span></p>-->
+                <p>{{post.author|capfirst}}, <span>Developer</span></p>
+              </div>
+            <div class="course-meta">
+              <div class="cm-info">
+                <h6>Category</h6>
+                <p>{{post.category}}</p>
+              </div>
+            </div>
+            <div class="course-meta">
+              <div class="cm-info">
+                <h6>Content</h6>
+                <p>{{post.intro}}</p>
+                <p>{{post.content_1}}</p>
+                <p>{{post.content_2}}</p>
+                <p>{{post.content_3}}</p>
+                <p>{{post.content_4}}</p>
+
+              </div>
+            </div>
+
+          </div>
+<!--          <a href="{% url 'post_detail' post.slug %}" class="button">View Post</a>-->
+
+<!--          <a href="#lessons" class="site-btn price-btn">View Posts</a>-->
+
+    <img src="" alt="" class="course-preview">
+    <div class="row">
+      <div class="col-lg-10 offset-lg-1 course-list">
+        <div class="cl-item">
+          <h4>Post Description</h4>
+          <p>{{post.description}}</p>
+        </div>
+
+        <div class="cl-item">
+          <h4>Author</h4>
+          <p>Mr {{post.author}}, is a really talented Person and has bagged various certifications, molestie quis ligula in, eleifend rhoncus ipsum. Donec ultrices, sem vel efficitur molestie, massa nisl posuere ipsum, ut vulputate mauris ligula a metus. Aenean vel congue diam, sed bibendum ipsum. Nunc vulputate aliquet tristique. Integer et pellentesque urna. Lorem ipsum dolor sit amet, consectetur. Phasellus sollicitudin et nunc eu efficitur. Sed ligula nulla, molestie quis ligula in, eleifend rhoncus ipsum. Donec ultrices, sem vel efficitur molestie, massa nisl posuere ipsum, ut vulputate mauris ligula a metus. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- single post section end -->
+
+
+<!-- Page end -->
+{% endblock %}

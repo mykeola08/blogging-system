@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" xmlns:tel="http://www.w3.org/1999/xhtml">
+<head>
+	<title>{{site_name}}Mykeola
+		{% block title %}
+	 		{% if page_title %}
+	 			{{ page_title }} -
+	 		{% endif %}
+ 			{{ site_name }}
+	 	{% endblock %}
+	</title>
+	<meta http-equiv="Content-Type" content="text/html" />
+	<meta charset="UTF-8">
+	<meta name="description" content="Mykeola {{ meta_description }}">
+	<meta name="keywords" content="Mykeola, education, lms, courses {{ meta_keywords }}">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Favicon -->
+	<link href="img/favicon.ico" rel="shortcut icon"/>
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,500,500i,600,600i,700,700i,800,800i" rel="stylesheet">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}"/>
+	<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/style.css'%}"/>
+
+</head>
+<body>
+	<header>
+
+		<img src='images/logo 2.png' class="logo">
+
+		<nav>
+
+			<ul class='list_styling'>
+				<li><a href="{% url 'home' %}">Home</a></li>
+				<li><a href="{% url 'post_list' %}">Posts</a></li>
+			</ul>
+
+		</nav>
+
+	</header>
+
+	<!-- Header section end -->
+
+	{% block content %}
+
+	{% endblock %}
+
+	<!-- footer section -->
+	<footer class="footer-section spad pb-0">
+		<div class="footer-top">
+			<div class="footer-warp">
+				<div class="row">
+					<div class="widget-item">
+						<h4>Contact Info</h4>
+						<ul class="contact-list">
+							<li>1481 Creekside Lane <br>Avila Beach, CA 931</li>
+							<li><a href="tel:+2349075199201">+23490 7519 9201</a></li>
+							<li><a href="mailto:yourmail@gmail.com">yourmail@gmail.com</a></li>
+						</ul>
+					</div>
+					<div class="widget-item">
+						<h4>Python</h4>
+						<ul>
+							<li><a href="">LMS</a></li>
+							<li><a href="">Computer Engeneering</a></li>
+							<li><a href="">Software Engeneering</a></li>
+							<li><a href="">Informational Engeneering</a></li>
+							<li><a href="">System Engeneering</a></li>
+						</ul>
+					</div>
+
+					<div class="widget-item">
+						<h4>Newsletter</h4>
+						<form class="footer-newslatter">
+							<input type="email" placeholder="E-mail">
+							<button class="site-btn">Subscribe</button>
+							<p>*We don’t spam</p>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<div class="footer-warp">
+				<ul class="footer-menu">
+					<li><a href="#">Terms & Conditions</a></li>
+					<li><a href="#">Register</a></li>
+					<li><a href="#">Privacy</a></li>
+				</ul>
+				<div class="copyright">
+					Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Designed <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://mykeola.org" target="_blank"> Mykeola</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- footer section end -->
+
+
+	<!--====== Javascripts & Jquery ======-->
+	<script async src="https://relayv2-dev.s3.amazonaws.com/analytics/distrobird_widget.js" data-widget-uid="c97e3cb3-9d88-42cc-a467-9288c7075e84"></script>
+	<script type="text/javascript" src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/mixitup.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/circle-progress.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/owl.carousel.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+</html>
